@@ -26,13 +26,9 @@ def update_dependency_version(root_directory, main_branch, dependency_name, new_
                     run_git_command(f"git add {full_path}", project_dir)
                     message = f"Update {dependency_name} version to {new_version}'"
                     run_git_command(f"git commit -m '{message}'", project_dir)                 
-                     #run_git_command("git push --set-upstream origin feature/autoVersioning", project_dir)
+                    #run_git_command("git push --set-upstream origin feature/autoVersioning", project_dir)
                 else:
                     logging.info(f"No changes to commit in {project_dir}")
-                # Push the new branch
-
-    # Push the new branch
-    # run_git_command("git push --set-upstream origin feature/autoVersioning", root_directory)
 
 def update_pom_file(file_path, dependency_name, new_version):
     try:
